@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    @apply m-0 p-0;
+    font-family: 'Graduate', cursive;
+}
+
+.App{
+    @apply w-screen h-screen ;
+    background:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(assets/bgmobile.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .Main{
+
+        @apply container mx-auto h-screen w-screen text-white flex justify-center overflow-hidden;
+
+        .Home{
+            @apply mx-auto text-center relative top-36 ;
+
+            img{
+                @apply relative mb-5;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                height: 120px;
+                border-radius: 50%
+            }
+
+            h1{
+                @apply text-3xl m-1;
+            }
+
+            h3{
+                @apply text-xl m-1;
+            }
+
+            p{
+                @apply text-lg m-1;
+            }
+
+            .explorebtn{
+                @apply p-3 px-10 rounded-lg mt-20;
+                background: #620571;
+                width: 168px;
+                
+            }
+
+            .socials{
+                @apply flex justify-center text-lg gap-7 mt-56;
+            }
+
+            
+        }
+        
+        
+
+    }
+
+
+    .Explore{
+        @apply container mx-auto fixed;
+        
+       
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+   
+    .App{
+        @apply w-screen h-screen;
+        background:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(assets/bg.jpg);
+        background-size: cover;
+        background-position: center;
+    
+        .Main{
+    
+            @apply container mx-auto text-white flex justify-center h-screen;
+    
+            .Home{
+                @apply mx-auto text-center w-screen h-3/4 -mt-16;
+    
+                img{
+                    @apply relative mb-5;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%
+                }
+    
+                h1{
+                    @apply text-3xl m-1;
+                }
+    
+                h3{
+                    @apply text-xl m-1;
+                }
+    
+                p{
+                    @apply text-lg m-1;
+                }
+    
+                .explorebtn{
+                    @apply p-3 px-5 text-sm text-center rounded-lg mt-16;
+                    background: #636363;
+                    width: 130px;
+                    
+                }
+
+                .socials{
+                    @apply flex justify-center gap-7 text-3xl mt-20;
+
+                }
+    
+                
+            }
+            
+            
+    
+        }
+    }
+
+    .Explore{
+        @apply w-screen h-screen;
+        #hamburger{
+            display: none;
+        }
+        .navbar{
+           @apply text-white;
+           ul{
+            @apply flex justify-center gap-14 text-xl overflow-hidden mt-5;
+            li{
+                @apply cursor-pointer px-10;
+            }
+           }
+        }
+        .MobileNav{
+            display: none 
+        }
+    }
+  }
+
+
+
+  // MOBILE ADJUSTMENTS / REMOVALS
+  @media only screen and (max-width: 600px){
+    #hamburger{
+        z-index: 2;
+        position: fixed;
+        right: 5px;
+        
+    }
+    .navbar{
+        
+       
+        display: none;
+      
+        
+}
+
+.MobileNav{
+    @apply flex justify-center bg-black ;
+
+    ul{
+        li{
+            @apply p-4 text-center w-screen;
+            border-bottom: 1px solid white;
+        }
+    }
+}
+  }
+
+
+
